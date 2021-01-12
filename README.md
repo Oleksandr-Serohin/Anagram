@@ -54,3 +54,12 @@ If the system cannot find javac, check the set path command. If javac runs but y
 * You version.
 
 
+`Task 2 - Unit tests`
+
+Write JUnit tests for previous application.
+
+ *In the future, all tasks are done with the Unit tests*
+ 
+ ![alt text](docs/Task_2_Code_Coverage.png "Task 2 - Unit tests")
+
+
