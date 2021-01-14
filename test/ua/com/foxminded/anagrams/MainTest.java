@@ -1,4 +1,4 @@
-package ua.com.foxminded.anagramstest;
+package ua.com.foxminded.anagrams;
 
 import static org.junit.Assert.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
