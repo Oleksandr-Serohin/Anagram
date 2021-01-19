@@ -15,7 +15,7 @@ public class Anagram {
     /**
      * String value reversed sentence
      */
-    private StringBuffer anagrams = new StringBuffer(""); // fo anagrams
+    private StringBuilder anagrams = new StringBuilder(); // fo anagrams
 
     /**
      * function reverses sentence with given parameters
@@ -24,8 +24,7 @@ public class Anagram {
      * @return String anagrams processed reverse sentence
      */
     public String makeAnagram(String sentence) {
-
-        if (sentence != null) { // if sentence not null
+       if (sentence != null) { // if sentence not null
             boolean hasAlfa = false;  //Has sentence letters 
             for (int i = 0; i < sentence.length(); i++) {
                 if (Character.isLetter(sentence.charAt(i))) { // check letters  
@@ -33,21 +32,21 @@ public class Anagram {
                 }
             }
             if (hasAlfa) { //if find letters 
-                List<Integer> indexDelimiters = new ArrayList<Integer>(); // declare an array where we put the index of
+                List<Integer> indexDelimiters = new ArrayList<>(); // declare an array where we put the index of
                                                                           // delimiters
-                StringBuilder Delimiters = new StringBuilder(); // declare StringBuilder delimiters
+                StringBuilder delimiters = new StringBuilder(); // declare StringBuilder delimiters
 
                 for (int i = 0; i < sentence.length(); i++) {
                     if (Character.isWhitespace(sentence.charAt(i))) { // if sign is delimiter
                         indexDelimiters.add(i); // put index delimiter in massive
-                        Delimiters.append(sentence.charAt(i)); // put delimiter in StringBuilder
+                        delimiters.append(sentence.charAt(i)); // put delimiter in StringBuilder
                     }
                 }
                 String[] word = sentence.split("\\s+"); // split the string into words if there is a whitespace and put
                                                         // it in the word array
                 for (int i = 0; i < word.length; i++) {
                     boolean singsRemoved = false; // are all non-letters removed
-                    List<Integer> digitals = new ArrayList<Integer>(); // declare an array where we put the index of
+                    List<Integer> digitals = new ArrayList<>(); // declare an array where we put the index of
                                                                        // non-letters
                     StringBuilder conclude = new StringBuilder(word[i]); // We put the word in StringBuffer according to
                                                                          // the
@@ -83,7 +82,7 @@ public class Anagram {
                     anagrams.append(conclude); // write the final word to string
                 }
                 for (int i = 0; i < indexDelimiters.size(); i++) {
-                    anagrams.insert(indexDelimiters.get(i), Character.toString(Delimiters.charAt(i))); // put delimiter
+                    anagrams.insert(indexDelimiters.get(i), Character.toString(delimiters.charAt(i))); // put delimiter
                     // in anagrams according index
                 }
             } else { // if not find letters

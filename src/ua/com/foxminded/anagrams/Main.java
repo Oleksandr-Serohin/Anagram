@@ -18,11 +18,9 @@ public class Main {
      */
     public static void main(String[] args) {
         
-            
         Scanner scan = new Scanner(System.in); // create scanner
         Anagram anagramSolver = new Anagram(); // create object class Anagrams
         System.out.println(anagramSolver.makeAnagram(scan.nextLine())); // send anagramSolver scan sentence, takes
                                                                         // sentence beck and print them
-
     }
 }

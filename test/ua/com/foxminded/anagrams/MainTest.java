@@ -1,6 +1,5 @@
 package ua.com.foxminded.anagrams;
 
-import static org.junit.Assert.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import java.io.ByteArrayInputStream;
@@ -8,8 +7,6 @@ import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 
 import org.junit.jupiter.api.*;
-
-import ua.com.foxminded.anagrams.Main;
 
 class MainTest {
     
@@ -22,7 +19,7 @@ class MainTest {
     }
 
     @Test
-    public void WhenAddSentences_captureOutput_AssertEquals_mustReturn_true() {
+    public void whenSentences_mustReturnTrue() {
         
         String sentences = "a1bcd efg!h";
         // System.setIn(InputStream in): Reallocate the "standard" input stream.
